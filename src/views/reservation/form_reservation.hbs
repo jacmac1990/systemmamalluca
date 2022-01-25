@@ -1,0 +1,44 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/add" method="POST">
+                        <div class="form-group">
+                            <input type="date" class="form-control" name="date_reservation" placeholder="Fecha de Reserva" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="name_reservation" placeholder="Nombre de la reserva" >
+                        </div>
+                        <div class="form-group">
+                        <select name="id_tour" class="form-select col-md-12" >                            
+                                <option selected>Seleccione Tour</option>
+                                {{#each tours}}  
+                                <option class="form-select"  value="{{id_tour}}">{{name_tour}}</option>
+                                 {{/each}}
+                       </select>
+                       </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="phone" placeholder="Telefono" >
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="num_of_adults" placeholder="Numero de Adulto" >
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" name="num_of_children" placeholder="Numero de ninos" >
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" name="transfer" placeholder="Transfers" >
+                        </div>
+                        <div class="form-group">
+                            <button class="btn btn-success btn-block">
+                                Guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+

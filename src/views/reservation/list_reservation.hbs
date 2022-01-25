@@ -1,0 +1,52 @@
+
+<div class="table-responsive  p-5 table table-striped">
+ 
+<table id="mydatatable" class="p-1" > 
+    <tfoot class="form-control">
+            <tr align="center">
+                <th>Filter..</th>
+                <th>Filter..</th>
+                <th>Filter..</th>
+                <th>Filter..</th>
+                <th>Filter..</th>
+                <th>Filter..</th>
+                <th>Filter..</th>
+                <th>Filter..</th>
+                <th>Filter..</th>
+            </tr>
+        </tfoot>
+    <thead>
+        <tr align="center">
+            <th>Nombre de la Reserva </th>
+            <th>Nombre del tour</th>
+            <th>Fecha de la reserva </th>
+            <th>Telefono </th>
+            <th>Adultos </th>
+            <th>Niños </th>
+            <th>Transfer </th> 
+            <th></th>  
+            <th></th>                                 
+        </tr>
+    </thead>
+        
+    
+    <tbody>
+        {{#each reservation}}
+    <tr  align="center">
+        <td>{{name_reservation}}</td>
+        <td>{{name_tour}}</td>
+        <td>{{formaterdate date_reservation}}</td>
+        <td>{{phone}}"</td>
+        <td>{{num_of_adults}}</td>
+        <td>{{num_of_children}}</td>
+        <td>{{transfer}}</td>
+        <td><a href="/delete/{{id_reservation}}" class="nav_link"> <i class="bi bi-trash"></i> <span class="nav_name"></span>Borrar</a></td>
+        <td><a href="/edit/{{id_reservation}}" class="nav_link"> <i class="bi bi-pencil"></i> <span class="nav_name"></span>Editar</a></td>
+    </tr> 
+    {{/each}}  
+    </tbody>                          
+    
+                     
+</table>
+</div>
+       

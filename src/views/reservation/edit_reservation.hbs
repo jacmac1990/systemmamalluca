@@ -1,0 +1,38 @@
+<div class="container p-4">
+    <div class="row">
+        <div class="col-md-4">
+            <div class="card">
+                <div class="card-body">
+                    <form action="/edit/{{edit_reservation.id_reservation}}" method="POST">
+                        <div class="form-group">
+                            <input type="date" class="form-control" value="{{formaterdate edit_reservation.date_reservation}}" name="date_reservation" placeholder="Fecha de Reserva" autofocus>
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" value="{{edit_reservation.id_tours}}" name="id_tours" placeholder="Tour" >
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" value="{{edit_reservation.name_reservation}}" name="name_reservation" placeholder="Nombre de la reserva" >
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" value="{{edit_reservation.phone}}" name="phone" placeholder="Telefono" >
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" value="{{edit_reservation.num_of_adults}}" name="num_of_adults" placeholder="Numero de Adulto" >
+                        </div>
+                        <div class="form-group">
+                            <input type="number" class="form-control" value="{{edit_reservation.num_of_children}}" name="num_of_children" placeholder="Numero de ninos" >
+                        </div>
+                        <div class="form-group">
+                            <input type="text" class="form-control" value="{{edit_reservation.transfer}}" name="transfer" placeholder="Transfers" >
+                        </div>
+                        <div class="form-group">
+                           <button class="btn btn-success btn-block">
+                                Guardar
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
